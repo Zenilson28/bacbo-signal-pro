@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#101522">
+<title>Bac Bo Signal Pro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>BAC BO</h1><p>Signal Pro</p></header>
+<main>
+<section class="dashboard">
+<div class="card"><span>Rodadas</span><strong id="roundCount">0</strong></div>
+<div class="card"><span>Acertos</span><strong id="wins">—</strong></div>
+<div class="card"><span>Erros</span><strong id="losses">—</strong></div>
+<div class="card"><span>Taxa</span><strong id="accuracy">—</strong></div>
+</section>
+<section class="signal-box">
+<h2>PRÓXIMO SINAL</h2>
+<div id="signal" class="signal neutral">AGUARDANDO DADOS</div>
+<div class="confidence">Confiança: <strong id="confidence">0%</strong></div>
+<p id="explanation">Registe algumas rodadas para iniciar a análise.</p>
+</section>
+<section class="input-box"><h2>Adicionar resultado</h2>
+<div class="buttons">
+<button class="player" onclick="addResult('PLAYER')">PLAYER</button>
+<button class="banker" onclick="addResult('BANKER')">BANKER</button>
+<button class="tie" onclick="addResult('TIE')">TIE</button>
+</div></section>
+<section class="stats"><h2>Estatísticas</h2>
+<div class="stat-row"><span>Player</span><strong id="playerStats">0%</strong></div>
+<div class="stat-row"><span>Banker</span><strong id="bankerStats">0%</strong></div>
+<div class="stat-row"><span>Tie</span><strong id="tieStats">0%</strong></div>
+</section>
+<section><h2>Histórico</h2><div id="history" class="history">Nenhuma rodada registada.</div></section>
+<section class="controls">
+<button onclick="undoLast()">↩ Desfazer</button>
+<button onclick="clearHistory()" class="danger">🗑 Limpar histórico</button>
+</section>
+<p class="warning">⚠️ Análise estatística apenas. Não existe garantia de acerto.</p>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
